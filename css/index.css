@@ -1,0 +1,128 @@
+/* Initial body */
+html {
+  height:100%;
+  min-height: 100%;
+
+}
+body {
+  height:100%;
+  min-height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Initial menu */
+.menu {
+  background: #202024 repeat left top; // url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
+  left: -285px;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 285px;
+}
+
+/* Basic styling */
+
+.jumbotron {
+  background-image: url('https://c4.staticflickr.com/8/7603/17019902577_18c372b822_k.jpg');
+  //background-image: url('http://i.imgur.com/HypCIt3.jpg');
+  height: 100%;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+.container {
+  margin-bottom: 80px;
+}
+
+.header h1 {
+   color: #000;
+   font-size: 30px;
+   font-weight: bold;
+   text-transform: lowercase;
+}
+
+.card {
+   overflow: hidden;
+   position: relative;
+   width: 23%;
+   display: inline-block;
+   margin: 0 2px;
+   position: relative;
+}
+
+.title {
+   color: #000;
+   font-size: 15px;
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+
+.developer {
+   color: #afafaf ;
+   font-size: 14px;
+}
+
+.price {
+   color: #000;
+   font-size: 14px;
+   font-weight: 700;
+   bottom: 100px;
+   right: 20px;
+   line-height: 60px;
+   width: 60px;
+   height: 60px;
+   position: absolute;
+   background: #fff;
+   border-bottom:5px solid #000;
+   text-align: center;
+}
+
+.menu ul {
+  border-top: 1px solid #636366;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #636366;
+  font-family: 'SaniTrixieSansRegular', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-close {
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.icon-menu {
+  width: 80px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-menu i {
+  margin-right: 5px;
+}
