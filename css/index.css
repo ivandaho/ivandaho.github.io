@@ -9,13 +9,17 @@ body {
   min-height: 100%;
   left: 0;
   margin: 0;
+  padding: 0;
   overflow: hidden;
   position: relative;
+
+  color: #000;
+  font-family: 'SaniTrixieSansRegular', sans-serif;
 }
 
 /* Initial menu */
 .menu {
-  background: #202024 repeat left top; // url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
+  background: #202024 repeat left top; 
   left: -285px;  /* start off behind the scenes */
   height: 100%;
   position: fixed;
@@ -24,53 +28,110 @@ body {
 
 /* Basic styling */
 
-.jumbotron {
-  background-image: url('https://c4.staticflickr.com/8/7603/17019902577_18c372b822_k.jpg');
-  //background-image: url('http://i.imgur.com/HypCIt3.jpg');
-  height: 100%;
+.bgimgphotos{
+  //z-index: -1;
+  opacity: 0;
+  position: absolute;
+  top:0px;
+  height:100%;
+  width:100%;
+  min-width: 100%;
+  min-height: 100%;
+  background-image: url('../img/bg_photos.jpg');
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
 }
 
-.container {
-  margin-bottom: 80px;
+.bgimgmusic{
+  opacity: 0;
+  position: absolute;
+  top:0px;
+  height:100%;
+  width:100%;
+  min-width: 100%;
+  min-height: 100%;
+  background-image: url('../img/bg_musicgear.jpg');
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+.jumbotron {
+  //z-index: -5;
+  //position: absolute;
+  top:0px;
+  height: 100%;
+  width: 100%;
+  background-image: url('../img/bg_caps.jpg');
+  //https://c4.staticflickr.com/8/7603/17019902577_18c372b822_k.jpg');
+  // provisions pic: http://i.imgur.com/HypCIt3.jpg
+  // debug half blue/red pic:  http://i.imgur.com/4E1MDV3.png
+  // cat pic: http://i.imgur.com/fQVUJaq.jpg
+
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+
+.main{
+  min-width: 100%;
+  width: 100%;
 }
 
 .header h1 {
-   color: #000;
+   font-color: #000;
    font-size: 30px;
    font-weight: bold;
    text-transform: lowercase;
 }
 
+.container {
+  margin-bottom: 80px;
+  //position: absolute;
+  max-width: 100%;
+  width: 800px;
+  //left: 50px;
+
+  margin-top: 15%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .card {
    overflow: hidden;
    position: relative;
-   width: 23%;
+   width: 200px;
    display: inline-block;
-   margin: 0 2px;
-   position: relative;
+   //margin: 30px;
+   margin-left: 0px;
+   margin-right: 0px;
 }
 
 .title {
-   color: #000;
+   color: #FFF0E0;
    font-size: 15px;
    font-weight: bold;
+   text-align: center;
    margin-bottom: 5px;
 }
 
-.developer {
+.subtitle {
    color: #afafaf ;
+
+   text-align: center;
    font-size: 14px;
 }
 
 .price {
-   color: #000;
+   //color: #000;
    font-size: 14px;
    font-weight: 700;
-   bottom: 100px;
+   bottom: 75px;
    right: 20px;
    line-height: 60px;
    width: 60px;
@@ -104,6 +165,16 @@ body {
   text-transform: uppercase;
 }
 
+.icon {
+  //z-index: -1;
+  //horizontal-align: center;
+  //height: 50px;
+  //position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+}
+
 .icon-close {
   cursor: pointer;
   padding-left: 10px;
@@ -111,8 +182,10 @@ body {
 }
 
 .icon-menu {
+  position:static;
+  //z-index: -1;
   width: 80px;
-  color: #fff;
+  color: #000;
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -126,3 +199,21 @@ body {
 .icon-menu i {
   margin-right: 5px;
 }
+
+
+/*
+  .video {
+  position: static;
+  top: 0px;
+  left: 0px;
+  z-index:-5;
+}
+
+.video video_1 {
+  position: static;
+  top: 0px;
+  left: 0px;
+  z-index:-5;
+}
+*/
+
