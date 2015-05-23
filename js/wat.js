@@ -5,11 +5,17 @@ var main = function() {
   // stuff for video playback and stop
   $('.card').on('mouseover', ".videos", function() {
     //$(this).find('.icon').hide();
-    $('#video_1').show().trigger('play').show();
+    $('#video_1').show().trigger('play');
+    $('.viddiv').animate({
+      opacity: "1"
+    }, 200);
   })
   .mouseout(function() {
     //$(this).find('.icon').show();
-    $('video').trigger('pause').hide();
+    $('#video_1').hide().trigger('pause');
+    $('.viddiv').animate({
+      opaciy: "0"
+    }, 200);
   });
 
   // stuff for changing background image
