@@ -72,6 +72,62 @@ var main = function() {
       left: "0px"
     }, 200);
   });
+
+  // stuff for animation drop down menu...
+  
+  var clicktoggle;
+  var toggletop_prog;
+  var toggleopc_prog;
+  var toggletop_photos;
+  var toggleopc_photos;
+  var toggletop_videos;
+  var toggleopc_videos;
+  var toggletop_music;
+  var toggleopc_music;
+  $('.card').on('click', ".prog", function() {
+    toggletop_prog = (toggletop_prog == "0px") ? "-50px": "0px";
+    toggleopc_prog = (toggleopc_prog == "1") ? "0": "1";
+    clicktoggle = (clicktoggle == "all") ? "none": "all";
+    $(this).parent().find('.submenuholder').find('.submenu').css("pointer-events", clicktoggle);
+    $('.sub_prog').show().animate({
+      top: toggletop_prog,
+      opacity: toggleopc_prog
+    }, 200);
+  });
+
+  $('.card').on('click', ".photos", function() {
+    toggletop_photos = (toggletop_photos == "0px") ? "-50px": "0px";
+    toggleopc_photos = (toggleopc_photos == "1") ? "0": "1";
+    clicktoggle = (clicktoggle == "all") ? "none": "all";
+    $(this).parent().find('.submenuholder').find('.submenu').css("pointer-events", clicktoggle);
+    $('.sub_photos').show().animate({
+      top: toggletop_photos,
+      opacity: toggleopc_photos
+    }, 200);
+  });
+
+  $('.card').on('click', ".videos", function() {
+    toggletop_videos = (toggletop_videos == "0px") ? "-50px": "0px";
+    toggleopc_videos = (toggleopc_videos == "1") ? "0": "1";
+    clicktoggle = (clicktoggle == "all") ? "none": "all";
+    $(this).parent().find('.submenuholder').find('.submenu').css("pointer-events", clicktoggle);
+    $('.sub_videos').show().animate({
+      top: toggletop_videos,
+      opacity: toggleopc_videos
+    }, 200);
+  });
+
+  $('.card').on('click', ".music", function() {
+    toggletop_music = (toggletop_music == "0px") ? "-50px": "0px";
+    toggleopc_music = (toggleopc_music == "1") ? "0": "1";
+    clicktoggle = (clicktoggle == "all") ? "none": "all";
+    $(this).parent().find('.submenuholder').find('.submenu').css("pointer-events", clicktoggle);
+    $('.sub_music').show().animate({
+      top: toggletop_music,
+      opacity: toggleopc_music
+    }, 200);
+  });
+
 };
 
 

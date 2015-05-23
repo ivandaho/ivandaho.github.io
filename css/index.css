@@ -29,7 +29,6 @@ body {
 /* Basic styling */
 
 .bgimgphotos{
-  //z-index: -1;
   opacity: 0;
   position: absolute;
   top:0px;
@@ -37,7 +36,8 @@ body {
   width:100%;
   min-width: 100%;
   min-height: 100%;
-  background-image: url('../img/bg_photos.jpg');
+  background-image: url('../img/bg_cat.jpg');
+  background-position:50% 90%;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
@@ -58,26 +58,43 @@ body {
        -o-background-size: cover;
           background-size: cover;
 }
-
 .jumbotron {
-  //z-index: -5;
-  //position: absolute;
+  background: linear-gradient(180deg, #1d5446, #1c7f66);
+  background-size: 150% 150%;
+  -webkit-animation: AnimationName 16s ease infinite;
+  -moz-animation: AnimationName 16s ease infinite;
+  -o-animation: AnimationName 16s ease infinite;
+  animation: AnimationName 10s ease infinite;
+  position: absolute;
   top:0px;
   height: 100%;
-  width: 100%;
-  background-image: url('../img/bg_caps.jpg');
+    width: 100%;
+    //background-image: url('../img/bg_caps.jpg');
   //https://c4.staticflickr.com/8/7603/17019902577_18c372b822_k.jpg');
   // provisions pic: http://i.imgur.com/HypCIt3.jpg
   // debug half blue/red pic:  http://i.imgur.com/4E1MDV3.png
   // cat pic: http://i.imgur.com/fQVUJaq.jpg
-
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
 }
-
-
+@-webkit-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
 .main{
   min-width: 100%;
   width: 100%;
@@ -92,32 +109,38 @@ body {
 
 .container {
   margin-bottom: 80px;
-  //position: absolute;
   max-width: 100%;
   width: 800px;
   //left: 50px;
 
-  margin-top: 15%;
+  margin-top: 20%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .card {
-   overflow: hidden;
-   position: relative;
-   width: 200px;
-   display: inline-block;
-   //margin: 30px;
-   margin-left: 0px;
-   margin-right: 0px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+  display: inline-block;
+  //margin: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+a {
+  color: #fff;
+  font-size: 15px;
+  //text-decoration: none;   // to remove underline
 }
 
 .title {
-   color: #FFF0E0;
-   font-size: 15px;
-   font-weight: bold;
-   text-align: center;
-   margin-bottom: 5px;
+  color: #FFF0E0;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .subtitle {
@@ -125,6 +148,21 @@ body {
 
    text-align: center;
    font-size: 14px;
+}
+
+.submenuholder {
+  position: relative;
+  height: 20px;
+}
+
+.submenu {
+  pointer-events: none;
+  position: absolute;
+  top: -50px;
+  opacity: 0;
+  color: #000000;
+  text-align: center;
+  width: 100%;
 }
 
 .price {
@@ -165,11 +203,10 @@ body {
   text-transform: uppercase;
 }
 
+// this seems to do nothing
 .icon {
-  //z-index: -1;
   //horizontal-align: center;
-  //height: 50px;
-  //position: relative;
+  height: 160px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -182,8 +219,8 @@ body {
 }
 
 .icon-menu {
-  position:static;
-  //z-index: -1;
+  position:absolute;
+  top: 0px;
   width: 80px;
   color: #000;
   cursor: pointer;
@@ -213,14 +250,12 @@ body {
   position: static;
   top: 0px;
   left: 0px;
-  z-index:-5;
 }
 
 .video video_1 {
   position: static;
   top: 0px;
   left: 0px;
-  z-index:-5;
 }
 */
 
