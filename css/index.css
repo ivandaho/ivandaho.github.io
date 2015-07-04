@@ -152,7 +152,7 @@ a {
 
 .submenuholder {
   position: relative;
-  height: 20px;
+  height: 40px;
 }
 
 .submenu {
@@ -161,7 +161,8 @@ a {
   top: -50px;
   opacity: 0;
   color: #000000;
-  text-align: center;
+  text-align: left;
+  left:40px;
   width: 100%;
 }
 

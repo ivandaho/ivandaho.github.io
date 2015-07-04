@@ -85,13 +85,13 @@ var main = function() {
   var toggletop_music;
   var toggleopc_music;
   $('.card').on('click', ".prog", function() {
-    toggletop_prog = (toggletop_prog == "0px") ? "-50px": "0px";
+    toggletop_prog = (toggletop_prog == "0px") ? "-50": "0px";
     toggleopc_prog = (toggleopc_prog == "1") ? "0": "1";
     clicktoggle = (clicktoggle == "all") ? "none": "all";
     $(this).parent().find('.submenuholder').find('.submenu').css("pointer-events", clicktoggle);
     $('.sub_prog').show().animate({
-      top: toggletop_prog,
-      opacity: toggleopc_prog
+      //top: toggletop_prog,
+      //opacity: toggleopc_prog
     }, 200);
   });
 
@@ -101,8 +101,8 @@ var main = function() {
     clicktoggle = (clicktoggle == "all") ? "none": "all";
     $(this).parent().find('.submenuholder').find('.submenu').css("pointer-events", clicktoggle);
     $('.sub_photos').show().animate({
-      top: toggletop_photos,
-      opacity: toggleopc_photos
+      //top: toggletop_photos,
+      //opacity: toggleopc_photos
     }, 200);
   });
 
@@ -112,8 +112,8 @@ var main = function() {
     clicktoggle = (clicktoggle == "all") ? "none": "all";
     $(this).parent().find('.submenuholder').find('.submenu').css("pointer-events", clicktoggle);
     $('.sub_videos').show().animate({
-      top: toggletop_videos,
-      opacity: toggleopc_videos
+      //top: toggletop_videos,
+      //opacity: toggleopc_videos
     }, 200);
   });
 
@@ -123,8 +123,8 @@ var main = function() {
     clicktoggle = (clicktoggle == "all") ? "none": "all";
     $(this).parent().find('.submenuholder').find('.submenu').css("pointer-events", clicktoggle);
     $('.sub_music').show().animate({
-      top: toggletop_music,
-      opacity: toggleopc_music
+      //top: toggletop_music,
+      //opacity: toggleopc_music
     }, 200);
   });
 

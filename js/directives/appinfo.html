@@ -1,10 +1,13 @@
 <div class="{{ info.classname }}" style="max-width:80%; max-height:80%; margin-left:auto; margin-right:auto;">
-        <img class="icon" ng-src="{{ info.icon }}" style="max-width:100%;"> 
+        <a href="{{ info.link1 }}"><img class="icon" ng-src="{{ info.icon }}" style="max-width:100%;"></a>
 </div>
 <h1 class="title">{{ info.title }}</h1> 
 <div class="submenuholder">
   <div class="submenu sub_{{ info.classname }}">
-    <a href="{{ info.link1 }}"> {{ info.link1name }} </a>
+    <a href="{{ info.link1 }}"> {{ info.link1name }} </a></br>
+    <a href="{{ info.link2 }}"> {{ info.link2name }} </a></br>
+    <a href="{{ info.link3 }}"> {{ info.link3name }} </a></br>
+    <a href="{{ info.link4 }}"> {{ info.link4name }} </a></br>
   </div>
 </div>
 <!-- <p class="subtitle">{{ info.subtitle }}</p> -->

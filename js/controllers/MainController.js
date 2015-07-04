@@ -6,8 +6,10 @@ app.controller('MainController', ['$scope', function($scope) {
 	    title: 'Programming', 
 	    subtitle: 'MOVE, Inc.', 
 	    price: 0.99,
-        link1: '#',
-        link1name: 'link 1 name'
+        link1: 'http://github.com/ivandaho',
+        link1name: 'first link',
+        link2: '#',
+        link2name: 'second link'
 	  }, 
 	  { 
         classname: 'photos',
@@ -15,7 +17,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	    title: 'Photos', 
 	    subtitle: 'Chico Dusty', 
 	    price: 2.99,
-        link1: '#',
+        link1: 'https://www.flickr.com/photos/99908143@N07/',
         link1name: 'link 1 name'
 	  },
 	  {
