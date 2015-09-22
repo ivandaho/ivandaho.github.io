@@ -61,10 +61,12 @@ body {
 .jumbotron {
   background: linear-gradient(180deg, #1d5446, #1c7f66);
   background-size: 150% 150%;
+  /*
   -webkit-animation: AnimationName 16s ease infinite;
   -moz-animation: AnimationName 16s ease infinite;
   -o-animation: AnimationName 16s ease infinite;
   animation: AnimationName 10s ease infinite;
+  */
   position: absolute;
   top:0px;
   height: 100%;
