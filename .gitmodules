@@ -1,0 +1,3 @@
+[submodule "rental"]
+	path = rental
+	url = https://github.com/ivandaho/rental
