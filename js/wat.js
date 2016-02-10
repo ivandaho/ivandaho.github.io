@@ -41,6 +41,17 @@ var main = function() {
     }, 200);
   });
 
+  $('.card').on('mouseover', ".prog", function() {
+    $('.bgimgprog').stop().animate({
+      opacity: "1"
+    }, 200);
+  })
+  .mouseout(function() {
+    $('.bgimgprog').stop().animate({
+      opacity: "0"
+    }, 200);
+  });
+
 /* old method
   $('.card').mouseover(function() {
     $('.jumbotron').css('background-image', 'url("../img/bg_musicgear.jpg")');
