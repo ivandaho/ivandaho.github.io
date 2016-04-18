@@ -290,8 +290,7 @@ a {
   left: 0px;
   position: fixed;
   text-align: right;
-  padding-left: 5px;
-  padding-bottom: 5px;
+  padding: 5px;
   color: #ffffff;
   //font-size:
 }
@@ -300,10 +299,26 @@ a {
   right: 0px;
   position: fixed;
   text-align: right;
-  padding-right: 5px;
-  padding-bottom: 5px;
+  padding: 5px;
   color: #ffffff;
   //font-size:
+}
+
+.infopg {
+    color: #ffffff;
+    position:absolute;
+    text-align: center;
+    top:50%;
+    left:50%;
+    margin-left:-200px;
+    margin-top:-50px;
+    width:400px;
+    height:100px;
+    
+}
+
+.back {
+    padding:5px;
 }
 
 /*
