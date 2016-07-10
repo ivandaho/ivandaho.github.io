@@ -1,3 +1,6 @@
 [submodule "rental"]
 	path = rental
 	url = https://github.com/ivandaho/rental
+[submodule "ibis"]
+	path = ibis
+	url = https://github.com/ivandaho/ibis
