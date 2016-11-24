@@ -26,7 +26,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	    title: 'Videos',
 	    subtitle: 'Armando P.',
 	    price: 1.99,
-        link1: '#',
+        link1: '/videos.html',
         link1name: 'link 1 name'
 	  },
 	  {

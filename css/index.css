@@ -86,11 +86,11 @@ body {
   top:0px;
   height: 100%;
     width: 100%;
-    //background-image: url('../img/bg_caps.jpg');
-  //https://c4.staticflickr.com/8/7603/17019902577_18c372b822_k.jpg');
-  // provisions pic: http://i.imgur.com/HypCIt3.jpg
-  // debug half blue/red pic:  http://i.imgur.com/4E1MDV3.png
-  // cat pic: http://i.imgur.com/fQVUJaq.jpg
+  /* background-image: url('../img/bg_caps.jpg'); */
+  /* https://c4.staticflickr.com/8/7603/17019902577_18c372b822_k.jpg'); */
+  /* provisions pic: http://i.imgur.com/HypCIt3.jpg */
+  /* debug half blue/red pic:  http://i.imgur.com/4E1MDV3.png */
+  /* cat pic: http://i.imgur.com/fQVUJaq.jpg */
 }
 @-webkit-keyframes AnimationName {
     0%{background-position:50% 0%}
@@ -148,9 +148,9 @@ body {
 }
 
 a {
-  color: #fff;
-  //font-size: 15px;
-  //text-decoration: none;   // to remove underline
+  color: #333;
+  /* //font-size: 15px; */
+  /* //text-decoration: none;   // to remove underline */
 }
 
 .title {
@@ -280,7 +280,7 @@ a {
   text-align: center;
   padding-left: 10px;
   padding-top: 10px;
-  color: #ffffff;
+  /* color: #ffffff; */
   font-size: 30px;
   height: 0px;
 }
@@ -291,8 +291,7 @@ a {
   position: fixed;
   text-align: right;
   padding: 5px;
-  color: #ffffff;
-  //font-size:
+  /* color: #ffffff; */
 }
 .eir {
   bottom: 0px;
@@ -300,12 +299,11 @@ a {
   position: fixed;
   text-align: right;
   padding: 5px;
-  color: #ffffff;
-  //font-size:
+  /* color: #ffffff; */
 }
 
 .infopg {
-    color: #ffffff;
+    /* color: #ffffff; */
     position:absolute;
     text-align: center;
     top:50%;
