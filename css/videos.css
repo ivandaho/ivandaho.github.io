@@ -2,6 +2,17 @@ html {
     position: relative;
     min-height: 100%;
 }
+.notetext {
+    font-size: large;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom:18px;
+    padding-left:8px;
+    background-color: #ff3333;
+}
+.lighttext {
+    color: #e6e6e6;
+}
 body {
     /* Margin bottom by footer height */
     margin-bottom: 50px;
