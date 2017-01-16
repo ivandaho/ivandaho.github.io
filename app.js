@@ -58,15 +58,15 @@
 
 	var _IndexPageComponent2 = _interopRequireDefault(_IndexPageComponent);
 
-	var _VideoPageComponent = __webpack_require__(485);
+	var _VideoPageComponent = __webpack_require__(486);
 
 	var _VideoPageComponent2 = _interopRequireDefault(_VideoPageComponent);
 
-	var _NoComponent = __webpack_require__(494);
+	var _NoComponent = __webpack_require__(495);
 
 	var _NoComponent2 = _interopRequireDefault(_NoComponent);
 
-	var _reactDocumentTitle = __webpack_require__(486);
+	var _reactDocumentTitle = __webpack_require__(487);
 
 	var _reactDocumentTitle2 = _interopRequireDefault(_reactDocumentTitle);
 
@@ -26574,6 +26574,10 @@
 
 	var _CardComponent2 = _interopRequireDefault(_CardComponent);
 
+	var _FooterComponent = __webpack_require__(485);
+
+	var _FooterComponent2 = _interopRequireDefault(_FooterComponent);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26600,7 +26604,7 @@
 	                'url': 'https://www.github.com/ivandaho',
 	                'local': false
 	            }, { 'title': 'Photos',
-	                'imgpath': './img/photos_tn_sq.png',
+	                'imgpath': './img/photos_tn_sq_2.jpg',
 	                'bgpath': './img/bg_cat.jpg',
 	                'url': 'https://www.flickr.com/photos/99908143@N07/',
 	                'local': false
@@ -26622,6 +26626,11 @@
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'react-main-wrapper' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { style: { position: 'fixed', bottom: '0px', width: '100%' } },
+	                    _react2.default.createElement(_FooterComponent2.default, null)
+	                ),
 	                _react2.default.createElement('div', { id: 'bg-id' }),
 	                _react2.default.createElement(
 	                    'div',
@@ -45404,7 +45413,7 @@
 	    _createClass(CardComponent, [{
 	        key: 'componentDidMount',
 	        value: function componentDidMount() {
-	            this.state = {};
+	            this.state = { 'vid': setTimeout(function () {}) };
 	            document.getElementById('bg-id').style.backgroundImage = 'none';
 	            document.getElementById('bg-id').style.opacity = 0;
 	        }
@@ -45429,15 +45438,14 @@
 	                    clearTimeout(this.state.vid + 1);
 	                    clearTimeout(this.state.vid + 2);
 	                    clearTimeout(this.state.vid + 3);
-	                } else {
-	                    clearTimeout(9);
 	                }
 	                document.getElementById('vid-container').style.opacity = 1;
 	                document.getElementById('bg-video').play();
 	                return;
+	            } else {
+	                document.getElementById('bg-id').style.backgroundImage = "url(\'" + this.props.bgpath + "\')";
+	                document.getElementById('bg-id').style.opacity = 1;
 	            }
-	            document.getElementById('bg-id').style.opacity = 1;
-	            document.getElementById('bg-id').style.backgroundImage = "url(\'" + this.props.bgpath + "\')";
 	        }
 	    }, {
 	        key: 'bgClear',
@@ -45448,7 +45456,8 @@
 	            this.setState({ 'vid': vid });
 	            document.getElementById('vid-container').style.opacity = 0;
 	            document.getElementById('bg-id').style.opacity = 0;
-	            document.getElementById('bg-id').style.backgroundImage = 'none';
+	            {/* TODO: transition not working?? */}
+	            {/* document.getElementById('bg-id').style.backgroundImage = 'none'; */}
 	        }
 	    }, {
 	        key: 'render',
@@ -45500,11 +45509,84 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(178);
+
 	var _reactBootstrap = __webpack_require__(234);
 
-	var _reactDocumentTitle = __webpack_require__(486);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var FooterComponent = function (_Component) {
+	    _inherits(FooterComponent, _Component);
+
+	    function FooterComponent() {
+	        _classCallCheck(this, FooterComponent);
+
+	        return _possibleConstructorReturn(this, (FooterComponent.__proto__ || Object.getPrototypeOf(FooterComponent)).apply(this, arguments));
+	    }
+
+	    _createClass(FooterComponent, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { id: 'footer' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { id: 'mid' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'https://github.com/ivandaho/site2' },
+	                        'source'
+	                    ),
+	                    ' \xB7 ',
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: 'https://github.com/ivandaho' },
+	                        'about'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return FooterComponent;
+	}(_react.Component);
+
+	exports.default = FooterComponent;
+
+/***/ },
+/* 486 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(178);
+
+	var _reactBootstrap = __webpack_require__(234);
+
+	var _reactDocumentTitle = __webpack_require__(487);
 
 	var _reactDocumentTitle2 = _interopRequireDefault(_reactDocumentTitle);
+
+	var _FooterComponent = __webpack_require__(485);
+
+	var _FooterComponent2 = _interopRequireDefault(_FooterComponent);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45614,38 +45696,47 @@
 	                    'div',
 	                    null,
 	                    _react2.default.createElement(
-	                        _reactBootstrap.Breadcrumb,
+	                        'div',
 	                        null,
 	                        _react2.default.createElement(
-	                            _reactBootstrap.Breadcrumb.Item,
-	                            { href: '/' },
-	                            'Home'
+	                            _reactBootstrap.Breadcrumb,
+	                            null,
+	                            _react2.default.createElement(
+	                                _reactBootstrap.Breadcrumb.Item,
+	                                null,
+	                                _react2.default.createElement(
+	                                    _reactRouter.Link,
+	                                    { to: '/' },
+	                                    'Home'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                _reactBootstrap.Breadcrumb.Item,
+	                                { active: true },
+	                                'Videos'
+	                            )
 	                        ),
 	                        _react2.default.createElement(
-	                            _reactBootstrap.Breadcrumb.Item,
-	                            { active: true },
-	                            'Videos'
+	                            _reactBootstrap.Grid,
+	                            null,
+	                            _react2.default.createElement(
+	                                _reactBootstrap.PageHeader,
+	                                null,
+	                                'Videos'
+	                            ),
+	                            _react2.default.createElement('br', null),
+	                            this.getData().map(function (obj, index) {
+	                                return _react2.default.createElement(VideoEntry, {
+	                                    key: obj.title,
+	                                    title: obj.title,
+	                                    date: obj.date,
+	                                    desc: obj.desc,
+	                                    src: obj.src
+	                                });
+	                            })
 	                        )
 	                    ),
-	                    _react2.default.createElement(
-	                        _reactBootstrap.Grid,
-	                        null,
-	                        _react2.default.createElement(
-	                            _reactBootstrap.PageHeader,
-	                            null,
-	                            'Videos'
-	                        ),
-	                        _react2.default.createElement('br', null),
-	                        this.getData().map(function (obj, index) {
-	                            return _react2.default.createElement(VideoEntry, {
-	                                key: obj.title,
-	                                title: obj.title,
-	                                date: obj.date,
-	                                desc: obj.desc,
-	                                src: obj.src
-	                            });
-	                        })
-	                    )
+	                    _react2.default.createElement(_FooterComponent2.default, null)
 	                )
 	            );
 	        }
@@ -45657,13 +45748,13 @@
 	exports.default = VideoPageComponent;
 
 /***/ },
-/* 486 */
+/* 487 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var React = __webpack_require__(1),
-	    withSideEffect = __webpack_require__(487);
+	    withSideEffect = __webpack_require__(488);
 
 	function reducePropsToState(propsList) {
 	  var innermostProps = propsList[propsList.length - 1];
@@ -45702,7 +45793,7 @@
 
 
 /***/ },
-/* 487 */
+/* 488 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45719,11 +45810,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _exenv = __webpack_require__(488);
+	var _exenv = __webpack_require__(489);
 
 	var _exenv2 = _interopRequireDefault(_exenv);
 
-	var _shallowequal = __webpack_require__(489);
+	var _shallowequal = __webpack_require__(490);
 
 	var _shallowequal2 = _interopRequireDefault(_shallowequal);
 
@@ -45831,7 +45922,7 @@
 	};
 
 /***/ },
-/* 488 */
+/* 489 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -45877,12 +45968,12 @@
 
 
 /***/ },
-/* 489 */
+/* 490 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var fetchKeys = __webpack_require__(490);
+	var fetchKeys = __webpack_require__(491);
 
 	module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
@@ -45930,7 +46021,7 @@
 	};
 
 /***/ },
-/* 490 */
+/* 491 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -45941,9 +46032,9 @@
 	 * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <https://lodash.com/license>
 	 */
-	var getNative = __webpack_require__(491),
-	    isArguments = __webpack_require__(492),
-	    isArray = __webpack_require__(493);
+	var getNative = __webpack_require__(492),
+	    isArguments = __webpack_require__(493),
+	    isArray = __webpack_require__(494);
 
 	/** Used to detect unsigned integer values. */
 	var reIsUint = /^\d+$/;
@@ -46172,7 +46263,7 @@
 
 
 /***/ },
-/* 491 */
+/* 492 */
 /***/ function(module, exports) {
 
 	/**
@@ -46315,7 +46406,7 @@
 
 
 /***/ },
-/* 492 */
+/* 493 */
 /***/ function(module, exports) {
 
 	/**
@@ -46550,7 +46641,7 @@
 
 
 /***/ },
-/* 493 */
+/* 494 */
 /***/ function(module, exports) {
 
 	/**
@@ -46736,7 +46827,7 @@
 
 
 /***/ },
-/* 494 */
+/* 495 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

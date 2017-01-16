@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import { Grid, Col } from 'react-bootstrap';
 
 import CardComponent from './CardComponent.jsx';
+import FooterComponent from './FooterComponent.jsx';
 
 export default class IndexPageComponent extends React.Component {
     getData() {
@@ -15,7 +16,7 @@ export default class IndexPageComponent extends React.Component {
                 'local': false
             },
             {'title': 'Photos',
-                'imgpath': './img/photos_tn_sq.png',
+                'imgpath': './img/photos_tn_sq_2.jpg',
                 'bgpath': './img/bg_cat.jpg',
                 'url': 'https://www.flickr.com/photos/99908143@N07/',
                 'local': false
@@ -37,6 +38,9 @@ export default class IndexPageComponent extends React.Component {
     render(){
         return (
             <div className="react-main-wrapper">
+                <div style={{position:'fixed',bottom:'0px',width:'100%'}}>
+                    <FooterComponent />
+                </div>
                 <div id="bg-id">
                 </div>
                 <div id="vid-container">
